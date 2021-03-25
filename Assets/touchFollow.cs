@@ -23,7 +23,7 @@
              newPos.x = worldPos.x;
              newPos.z = worldPos.z;
              // apply new position
-             transform.position = newPos;
+             transform.position = Vector3.MoveTowards(transform.position, worldPos, 10 * Time.deltaTime);
          }
      }
  }
